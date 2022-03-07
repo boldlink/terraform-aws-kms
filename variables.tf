@@ -1,6 +1,6 @@
 
 variable "description" {
-  default     = ""
+  default     = null
   description = "The description of the key as viewed in AWS console."
   type        = string
 }
@@ -18,7 +18,7 @@ variable "customer_master_key_spec" {
 }
 
 variable "policy" {
-  default     = ""
+  default     = null
   description = "A valid policy JSON document. Although this is a key policy, not an IAM policy, an aws_iam_policy_document, in the form that designates a principal, can be used"
   type        = string
 }
@@ -59,7 +59,7 @@ variable "name" {
 }
 
 variable "environment" {
-  default     = ""
+  default     = null
   description = "Environment tag, e.g prod, test"
   type        = string
 }
@@ -71,7 +71,6 @@ variable "other_tags" {
 }
 
 variable "alias_name" {
-  default     = ""
   description = "The display name of the alias. The name must start with the word `alias` followed by a forward slash (alias/)"
   type        = string
 }
