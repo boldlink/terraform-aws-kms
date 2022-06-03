@@ -45,7 +45,7 @@ curl -L "$(curl -s https://api.github.com/repos/infracost/infracost/releases/lat
 [`coreutils`](https://formulae.brew.sh/formula/coreutils) is required for `terraform_validate` hook on MacOS (due to use of `realpath`).
 
 ```bash
-brew install pre-commit terraform-docs tflint coreutils checkov infracost 
+brew install pre-commit terraform-docs tflint coreutils checkov infracost
 ```
 
 </details>
@@ -54,5 +54,3 @@ brew install pre-commit terraform-docs tflint coreutils checkov infracost
 
 The command `pre-commit run -a` executes the hooks on all files in the repository
 The command  `pre-commit run` is executed only on newly added files/modified files in git that await commiting. This command is also executed automatically when you attempt to do a git commit.
-
-
