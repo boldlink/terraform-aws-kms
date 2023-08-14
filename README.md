@@ -6,6 +6,7 @@
 [![Build Status](https://github.com/boldlink/terraform-aws-kms/actions/workflows/pr-labeler.yaml/badge.svg)](https://github.com/boldlink/terraform-aws-kms/actions)
 [![Build Status](https://github.com/boldlink/terraform-aws-kms/actions/workflows/module-examples-tests.yaml/badge.svg)](https://github.com/boldlink/terraform-aws-kms/actions)
 [![Build Status](https://github.com/boldlink/terraform-aws-kms/actions/workflows/checkov.yaml/badge.svg)](https://github.com/boldlink/terraform-aws-kms/actions)
+[![Build Status](https://github.com/boldlink/terraform-aws-kms/actions/workflows/auto-merge.yaml/badge.svg)](https://github.com/boldlink/terraform-aws-kms/actions)
 [![Build Status](https://github.com/boldlink/terraform-aws-kms/actions/workflows/auto-badge.yaml/badge.svg)](https://github.com/boldlink/terraform-aws-kms/actions)
 
 [<img src="https://avatars.githubusercontent.com/u/25388280?s=200&v=4" width="96"/>](https://boldlink.io)
@@ -98,7 +99,7 @@ No modules.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.9.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.12.0 |
 
 ## Modules
 
