@@ -1,7 +1,7 @@
 
-#output "example" {
-#  description = "Example KMS output"
-#  value = [
-#    module.complete_kms,
-#  ]
-#}
+output "example" {
+  description = "Example KMS output"
+  value = [
+    module.complete_kms,
+  ]
+}
