@@ -16,15 +16,19 @@
 
 This module creates single-Region or multi-Region primary KMS key.
 
-Example available [here](https://github.com/boldlink/terraform-aws-kms/tree/main/examples)
+### Reasons to Use this Module over Stand Alone Resources
+- Automatically create and associate KMS aliases with the generated CMKs, providing user-friendly logical names to reference keys and enhance key management.
+- The module removes the complexities of CMK and alias creation, offering a straightforward method to manage AWS KMS resources.
+
+Example available [here](./examples)
 
 ## Usage
-*NOTE*: These examples use the latest version of this module
+**NOTE**: These examples use the latest version of this module
 
-```console
-
+```hcl
 module "minimum_kms" {
-  source              = "./../../"
+  source              = "boldlink/kms/aws/"
+  version             = "<latest_version_here>"
   description         = "Example minimum kms key"
   name                = "example-minimum-kms"
 }
@@ -99,7 +103,7 @@ No modules.
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.12.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.19.0 |
 
 ## Modules
 
@@ -153,10 +157,22 @@ This repository uses third party software:
   * Manually use via pre-commit
 
 ### Makefile
-The makefile contain in this repo is optimised for linux paths and the main purpose is to execute testing for now.
-* Create all tests:
-`$ make tests`
-* Clean all tests:
-`$ make clean`
+The makefile contained in this repo is optimized for linux paths and the main purpose is to execute testing for now.
+* Create all tests stacks including any supporting resources:
+```console
+make tests
+```
+* Clean all tests *except* existing supporting resources:
+```console
+make clean
+```
+* Clean supporting resources - this is done separately so you can test your module build/modify/destroy independently.
+```console
+make cleansupporting
+```
+* !!!DANGER!!! Clean the state files from examples and test/supportingResources - use with CAUTION!!!
+```console
+make cleanstatefiles
+```
 
-#### BOLDLink-SIG 2022
+#### BOLDLink-SIG 2023
